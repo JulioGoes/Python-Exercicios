@@ -16,4 +16,5 @@ Os exercícios estão dividos em seus respectivos repositórios, o enunciado de 
 1. **ExerciciosClasses**
 1. **ListaDeExerciciosProjetos**
 
-#### Resolução de Exercício - Exemplo
+### Resolução de Exercício - Exemplo
+!['imagem'](arquivos/image.png)
