@@ -18,3 +18,34 @@
 #         FGTS (11%)                      : R$  121,00
 #         Total de descontos              : R$  165,00
 #         Salário Liquido                 : R$  935,00
+import os
+os.system('clear')
+
+print('Vamos calcular sua folha de pagamento!')
+hora_trabalhada = float(input('Informe o valor da hora trabalhada: '))
+quantidade_hora = float(input('Quantas horas trabalhou esse mês: '))
+salario_bruto = hora_trabalhada * quantidade_hora
+fgts = salario_bruto * 0.11
+desconto_sindicato = salario_bruto * 0.03
+desconto_ir = 0.0
+desconto_inss = salario_bruto * 0.10
+if salario_bruto > 0 and salario_bruto <= 900:
+    desconto_ir = 0
+elif salario_bruto > 900 and salario_bruto <= 1500:
+    desconto_ir = salario_bruto * 0.05
+elif salario_bruto > 1500 and salario_bruto <= 2500:
+    desconto_ir = salario_bruto * 0.10
+elif salario_bruto > 2500:
+    desconto_ir = salario_bruto * 0.20
+else:
+    print("Valores Incorretos!")
+
+descontos = desconto_ir + desconto_inss
+salario_liquido = salario_bruto - descontos
+
+print(f'Sálario Bruto: {salario_bruto}')
+print(f'Imposto de Renda: {desconto_ir}')
+print(f'INSS: {desconto_inss}')
+print(f'FGTS: {fgts}')
+print(f'Total de Descontos: {descontos}')
+print(f'Sálario Líquido: {salario_liquido}')
