@@ -1,2 +1,4 @@
 # Automatically created by mypy
 .mypy_cache
+.vscode
+venv
